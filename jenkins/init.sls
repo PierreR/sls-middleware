@@ -8,5 +8,3 @@ base_pkgs:
     - pkgs:
       - java-1.7.0-openjdk
       - jenkins
-      - require:
-        - file: jenkins.repo
