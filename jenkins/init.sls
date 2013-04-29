@@ -1,7 +1,7 @@
 jenkins.repo:
   file.managed:
+    - name: /etc/yum.repos.d/jenkins.repo
     - source: salt://jenkins/jenkins.repo
-    - target: /etc/yum.repos.d/jenkins.repo
 
 base_pkgs:
   pkg.installed:
@@ -10,4 +10,3 @@ base_pkgs:
       - jenkins
       - require:
         - file: jenkins.repo
-
