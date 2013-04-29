@@ -3,6 +3,6 @@ base_pkgs:
     - pkgs:
       - java-1.7.0-openjdk
 
-/etc/yum.repo.d
+/etc/yum.repo.d:
   file.managed:
     - source: salt://jenkins/jenkins.repo
