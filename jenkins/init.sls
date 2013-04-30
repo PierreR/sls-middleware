@@ -3,7 +3,7 @@ jenkins.repo:
     - name: /etc/yum.repos.d/jenkins.repo
     - source: salt://jenkins/jenkins.repo
   file.managed:
-    - name: /etc/yum.repos.d/jenkins.org.key
+    - name: /etc/yum.repos.d/jenkins-ci.org.key
     - source: salt://jenkins/jenkins-ci.org.key
 
 base_pkgs:
