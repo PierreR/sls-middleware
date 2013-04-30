@@ -1,7 +1,7 @@
 jenkins.repo:
   file.managed:
-    - name: /etc/yum.repos.d/jenkins.repo
-    - source: salt://jenkins/jenkins.repo
+    - name: /etc/yum.repos.d/jenkins-ci.repo
+    - source: salt://jenkins/jenkins-ci.repo
   file.managed:
     - name: /etc/yum.repos.d/jenkins-ci.org.key
     - source: salt://jenkins/jenkins-ci.org.key
