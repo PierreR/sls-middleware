@@ -1,12 +1,6 @@
-jenkins.repo:
-  file:
-    - managed
-    - name: /etc/yum.repos.d/jenkins-ci.repo
-    - source: salt://jenkins/jenkins-c.repo
-  file:
-    - managed
-    - name: /etc/yum.repos.d/jenkins-ci.org.key
-    - source: salt://jenkins/jenkins-ci.org.key
+/etc/yum.repos.d:
+  file.recurse:
+    - source: salt://jenkins/yum.repos.d
 
 base_pkgs:
   pkg.installed:
