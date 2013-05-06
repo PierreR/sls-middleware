@@ -10,6 +10,11 @@ install:
     - pkgs:
       - java-1.7.0-openjdk
       - jenkins
+      - fontconfig
+      - libXfont
+      - libfontenc
+      - ttmkfdir
+      - xorg-x11-font-utils
     - require:
       - file: install
       - cmd: install
