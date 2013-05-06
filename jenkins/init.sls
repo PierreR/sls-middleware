@@ -8,4 +8,4 @@ base_pkgs:
       - java-1.7.0-openjdk
       - jenkins
       - require:
-        file: /etc/yum.repos.d
+        - file: /etc/yum.repos.d
