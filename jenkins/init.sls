@@ -18,3 +18,14 @@ install:
     - require:
       - file: install
       - cmd: install
+  service:
+    - name: jenkins
+    - running
+
+{% for name in salt['pillar.get']('jenkins:extensions') %}
+wget --no-check-certificate http://updates.jenkins-ci.org/latest/{{name}}.hpi:
+  cmd.run:
+    - require:
+      - service: install
+{% endfor %}
+
